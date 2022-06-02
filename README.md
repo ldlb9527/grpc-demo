@@ -280,13 +280,6 @@ message UserEntity {
 }
 ```
 ***
-## 18.代码生成  
-* 使用 `protoc`工具可以把编写好的proto文件“编译”为Java, Python, C++, Go, Ruby, JavaNano, Objective-C,或C#代码
-```shell
-protoc --proto_path=IMPORT_PATH --cpp_out=DST_DIR --java_out=DST_DIR --python_out=DST_DIR --go_out=DST_DIR path/to/file.proto
-```
-* `IMPORT_PATH`：指定proto文件的路径，如果没有指定， protoc会从当前目录搜索对应的proto文件，如果有多个路径，那么可以指定多次`--proto_path`
-* 指定各语言代码的输出路径,–-cpp_out：生成c++代码  --java_out ：生成java代码
 
 
 
