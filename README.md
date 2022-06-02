@@ -1,4 +1,4 @@
-![](https://img.shields.io/badge/-ceph-green)
+![](https://img.shields.io/badge/grpc-proto3-green)
 # 一、grpc usage (完整demo,可直接从第五步开始运行)
 * **1.安装`protoc`**
 ```
@@ -10,7 +10,7 @@ protoc --version  #确保版本在3.0+
 go get -u github.com/golang/protobuf/protoc-gen-go
 ```
 ***
-* 3.**编写user.proto文件,前往[proto学习](https://blog.csdn.net/xp178171640/article/details/102951328)**
+* 3.**编写user.proto文件,前往[proto3语法学习](#proto)**
 ```
 protoc -I . users/user.proto --go_out=plugins=grpc:.  //会在users包下生成user.pb.go文件
 ```
@@ -45,8 +45,7 @@ aaaa 28
 2022/05/31 15:30:53 user delete success: success
 ```
 ***
-# 二、proto学习
-## proto3语法
+# 二、<a id="proto"></a>proto3语法学习
 ## 1.定义一个 Message
 ```protobuf
 syntax = "proto3"; //指定使用proto3，如果不指定的话，编译器会使用proto2去编译
